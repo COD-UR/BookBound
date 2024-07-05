@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs"); %>
+
+<section class="bookinfo">
+
+    <h1><%= books.title %></h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img src="https://covers.openlibrary.org/b/olid/<%= books.cover_id %>-L.jpg" alt="Book Cover">
+        </div>
+        <div class="col-md-8 description">
+            <input type="hidden" name="bookid" value="<%= books.id %>">
+            <p> Author:  <%= books.author %></p>
+            <p> Rating:  <%= books.rating %>/5</p>
+            <p> Cover Id:  <%= books.cover_id %></p>
+            <p> Genre:  <%= books.genre %></p>
+            <p> Review:<p></p> <%= books.review %></p>
+            <p> Wanna read? Here's the link: &nbsp;<a href="<%= books.url %>"> <%= books.url %></a></p>
+        </div>
+    </div>
+    <form class="homebtn" action="/home" method="POST">
+        <button type="submit" class="btn btn-primary" style="width: 20%; margin-top: 1vw; background-color: #0e9370;"> Back to Home <i class="fa-solid fa-house-chimney"></i> </button>
+    </form>
+    <%- include("partials/comment.ejs"); %>
+
+</section>
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<%- include ("partials/navbar.ejs") %>
+
+
+<sectiom id="library">
+
+    <div class="row">
+ 
+        <!-- kyunki "books" ek array hai, isliye har ek element pe loop hona hoga. -->
+         <% books.forEach(book => { %> 
+            <div class="col-md-2 col-sm-6">
+                <a href="/review/<%= book.id %>">
+                    <img src="https://covers.openlibrary.org/b/olid/<%=book.cover_id%>-M.jpg" /><br>
+                    <h5><%= book.title %></h5>
+                </a>
+                <span class="heading">Rating:</span>
+                <span class="rating">
+                    <% 
+                    const star_emoji = "★"; 
+                    const faded_star_emoji = "☆"; 
+                    const stars = [];
+                    for (let j = 0; j < 5; j++) {
+                        if (j < book.rating) {
+                            stars.push(star_emoji); 
+                        } else {
+                            stars.push(faded_star_emoji); 
+                        }
+                    }
+                    %>
+                    <%= stars.join(' ') %>  
+                </span>
+                <span>Bookmark: </span>
+                <form class="bookmark" action="/bookmark" method="post">
+                    <input type="checkbox" onchange="this.form.submit()" name="bookmarkedId" value="<%= book.id %>">
+                  </form>
+
+                  
+
+            </div>
+            
+
+         <%  }); %>
+
+
+
+
+    </div>
+
+</sectiom>
+
+<%- include ("partials/footer.ejs") %>

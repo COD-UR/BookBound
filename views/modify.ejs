@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") %>
+
+<section class="modify">
+  <br><h1>MODIFY!</h1><br>
+
+  <div class="col-md-12 col-sm-12">
+    <form id="modifyForm" method="POST">
+      <div class="mb-3">
+        <input type="text" class="form-control" name="book_title" placeholder="Book Title" autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" name="book_author" placeholder="Book Author">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" name="book_genre" placeholder="Book Genre">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" name="book_rating" placeholder="Book Rating">
+      </div>
+      <div class="mb-3">
+        <textarea style="width: 100%;" class="form-control" name="book_review" rows="10" placeholder="Book Review"></textarea>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" name="book_date" placeholder="Book added date">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" name="book_coverid" placeholder="Book Cover ID">
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" name="book_url" placeholder="Book URL">
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-12 col-sm-12" style="display: flex; justify-content: center; width: 50%;">
+    <button type="button" class="btn btn-primary" style="flex: 1; margin-right: 0.5vw; background-color: #0e9370;" onclick="submitForm('/add')">Post</button>
+    <button type="button" class="btn btn-primary" style="flex: 1; margin-right: 0.5vw;" onclick="submitForm('/update')">Update</button>
+    <button type="button" class="btn btn-primary" style="flex: 1; background-color: #973131;" onclick="submitForm('/delete')">Delete</button>
+    <button type="button" class="btn btn-primary" style="flex: 1; background-color: #3DC2EC;" onclick="submitForm('/home')">Home</button>
+  </div>
+</section>
+
+<script>
+  function submitForm(action) {
+    const form = document.getElementById('modifyForm');
+    form.action = action;
+    form.submit();
+  }
+</script>

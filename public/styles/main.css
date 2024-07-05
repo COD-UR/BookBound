@@ -1,0 +1,657 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #f3d4a5;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#navbar1 {
+    height: 4rem;
+    padding: 0 7rem;
+    background-color: #d29656;
+    font-family: 'Crimson Text', serif;
+}
+
+#navbar1 h1 {
+    position: absolute;
+    display: inline-block;
+    padding-top: 0.5rem;
+}
+
+#navbar1 ul {
+    padding-top: 0.8rem;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    position: absolute;
+    right: 5px;
+    left: 47%;
+}
+
+#navbar1 li {
+    display: inline-block;
+    position: relative;
+    margin-left: 1.5rem;
+}
+
+#navbar1 a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #191825;
+    transition: color 0.4s ease;
+}
+
+#navbar1 a:hover {
+    color: white;
+}
+
+#navbar2 {
+    height: 3.5vw;
+    width: 100%;
+    background-color: #e9b985;
+    padding: 0 10.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#navbar2 h2 {
+    font-size: 1.8vw;
+    padding-top: 0.4vw;
+}
+
+#searchbar {
+    height: 1.8vw;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+}
+
+#searchbar .btn{
+    background-color: #f3d4a5;
+    border-color: #d29656;
+    color: #735403;
+    width:10vw;
+}
+
+#searchbar input{
+    width: 20vw;
+}
+
+/* dropdown */
+.dropdown{
+    padding-right: 7vw;
+}
+
+.dropdown .btn, .dropdown-menu li{
+    background-color: #f3d4a5;
+    border-color: #d29656;
+    color: #735403;
+}
+
+.dropdown-menu {
+    background-color: #f3d4a5;
+    border: 1px solid #d29656;
+}
+
+.dropdown-menu li {
+    color: #735403;
+}
+
+
+/* books container */
+
+#library .row {
+    text-align: auto;
+    margin: 4rem;
+}
+
+
+#library img {
+    margin-bottom: 0.7vw;
+    max-width: 100%; /* Make sure the image fits within the section */
+    height: 20vw;
+}
+
+#library h5, a{
+    text-decoration: none;
+    font-family: 'Crimson Text', serif;
+    color: #c12e07;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+#library .rating{
+    position: static;
+    font-size: 1.5vw;
+}
+
+#library .bookmark{
+    position: static;
+    display: inline-block;
+}
+
+#library .col-md-2, .col-sm-6{
+    margin-bottom: 3vw;
+}
+
+/* Author login */
+
+.background-container {
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg id='patternId' width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='hsla(31, 69%25, 72%25, 1)'/%3E%3Cpath d='M18.822 18.717s.077-1.396-.737-2.21c-.813-.813-2.21-.736-2.21-.736s-.076 1.396.737 2.21c.814.813 2.21.736 2.21.736zm0-17.643s-1.396-.077-2.21.736c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.736c.813-.814.736-2.21.736-2.21zM3.389 17.98c.813-.813.736-2.21.736-2.21s-1.396-.076-2.21.737c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.737zm.736-13.96s.077-1.396-.736-2.21c-.814-.813-2.21-.736-2.21-.736s-.077 1.396.736 2.21c.814.813 2.21.736 2.21.736z' stroke-width='1' stroke='none' fill='hsla(4, 90%25, 58%25, 1)'/%3E%3Cpath d='M15.833 9.896s-.932-1.042-2.083-1.042c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm-7.5 0S7.401 8.854 6.25 8.854c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm2.709-3.75c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083C8.958 7.296 10 8.229 10 8.229s1.042-.933 1.042-2.083zm-2.084 7.5c0 1.15 1.042 2.083 1.042 2.083s1.042-.933 1.042-2.083c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083z' stroke-width='1' stroke='none' fill='hsla(31, 58%25, 58%25, 1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='800%25' height='800%25' transform='translate(0,0)' fill='url(%23a)'/%3E%3C/svg%3E");
+}
+
+
+.login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 30%;
+    background-color: #d29656;
+    border: #191825 solid 0.6vw;
+    border-radius: 2vw;
+    margin: auto; 
+    top: 4.2vw;
+}
+
+.login h2{
+    font-family: 'Crimson Text', serif;
+    color: #c12e07;
+    font-weight: bolder;
+}
+
+.login form{
+    font-size: medium;
+    font-weight: bold;
+    position: relative;
+    width: 70%;
+}
+
+/* Update/edit/Delete Page */
+
+.modify{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+    margin-bottom: 10vw; 
+}
+
+.modify form{
+    font-size: medium;
+    font-weight: bold;
+    position: relative;
+    width: 70%;
+    left: 14vw;
+}
+
+/* Review Page */
+
+.bookinfo {
+    position: static;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Ensure the section takes the full height of the viewport */
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(10)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(215,100%,77.6%,1)'/><path d='M23.222 25.097l-3.266-2.056-3.219 2.058.983-3.847-3.042-2.503 3.936-.18 1.52-3.668 1.342 3.578 3.846.312-2.996 2.505z'  stroke-linejoin='round' stroke-linecap='round' stroke-width='2' stroke='hsla(215,66.8%,53.9%,1)' fill='none'/><path d='M.133-5.1l-1.52 3.668-3.935.18 3.043 2.504-.985 3.848L-.043 3.04l3.264 2.057-.895-3.803L5.322-1.21l-3.845-.312L.133-5.1zm40 0l-1.52 3.668-3.935.18 3.043 2.504-.985 3.848 3.221-2.059 3.264 2.057-.895-3.803 2.996-2.504-3.845-.312-1.344-3.579z'  stroke-linejoin='round' stroke-linecap='round' stroke-width='2' stroke='hsla(215,75.3%,85.7%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    background-size: cover; /* Make sure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+}
+
+
+
+.bookinfo h1 {
+    position: relative;
+    font-family: 'Crimson text', serif;
+    font-weight: bolder;
+    font-size: 7vw;
+    top: 2.3vw;
+    margin-bottom: 7vw;
+    color: #191825;
+    text-decoration: underline;
+}
+
+.bookinfo .row {
+    margin: 0 7vw;
+    text-align: left;
+}
+
+.bookinfo .row .description {
+    padding-top: 1vw;
+    font-size: large;
+    font-weight: bold;
+    background-color: #bfd6f6;
+    border: 0.5vw solid black;
+    border-radius: 0.8vw;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal;
+}
+
+.description a {
+    text-decoration: underline;
+}
+
+.bookinfo img {
+    border: 0.5vw solid black;
+    border-radius: 0.8vw;
+    width: 25vw;
+}
+
+.bookinfo .homebtn{
+    margin: 4vw 0;
+}
+
+.commentSection {
+    position: relative;
+    margin: 0 auto 4vw;
+    max-width: 600px; /* Adjust the max-width as needed */
+    background-color: #bfd6f6;
+    text-align: center;
+    border: 0.5vw solid black;
+    border-radius: 0.8vw;
+}
+
+.commentSection .row {
+    margin: 0 auto;
+}
+
+.commentSection .comment {
+    width: 100%;
+}
+
+.commentSection .btn {
+    display: block; 
+    margin: 0 auto; 
+    background-color: #0e9370;
+    color: white;
+    margin-top: 1vw;
+    border: none; 
+    cursor: pointer;
+}
+
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+}
+
+
+.usercomment .row .abc{
+    background-color: #bfd6f6;
+    font-family: "crimson text", serif;
+    margin-bottom: 0.5vw;
+    padding: 0.5vw 1vw 0;
+}
+
+.abc label{
+    font-weight: bold;
+}
+
+.bookmark{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.aboutus{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2vw 7vw;
+}
+
+.aboutus h1{
+    font-family: "crimson text", serif;
+    font-weight: bolder;
+}
+
+
+
+@media (max-width: 768px) {
+    #navbar1 {
+        padding: 0 1rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar1 h1 {
+        position: static;
+        margin-bottom: 0.5rem;
+    }
+
+    #navbar1 ul {
+        margin-bottom: 4vw;
+        padding: 0;
+        position: static;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    #navbar1 li {
+        margin-left: 6vw;
+    }
+
+    #navbar1 a {
+        font-size: 1.2rem;
+    }
+
+    #navbar2 {
+        height: 15vw;
+        padding: 0 1rem;
+        display: flex; /* Use flexbox */
+        flex-direction: row; /* Align elements in a row */
+        align-items: center;
+        justify-content: center; /* Center elements horizontally */
+        white-space: nowrap;
+    }
+    
+    #navbar2 h2 {
+        font-size: 6vw;
+        padding-left: 27vw; /* Adjust padding as needed */
+        margin: 0 1rem 0 0; /* Adjust margins as needed */
+        display: inline-block;
+    }
+    
+    #searchbar {
+        visibility: hidden;
+    }
+    
+    .dropdown {
+        display: inline-block;
+        right: 15vw;
+    }
+    
+    .dropdown .btn, .dropdown-menu li{
+        background-color: #f3d4a5;
+        border-color: #d29656;
+        color: #735403;
+    }
+    
+    .dropdown-menu {
+        background-color: #f3d4a5;
+        border: 1px solid #d29656;
+    }
+    
+    .dropdown-menu li {
+        color: #735403;
+    }
+    
+    
+    /* books container */
+    
+    #library .row {
+        text-align: auto;
+        margin: 4rem;
+    }
+    
+    
+    #library img {
+        margin-bottom: 0.7vw;
+        max-width: 100%; /* Make sure the image fits within the section */
+        height: 90vw;
+        width: 70vw;
+    }
+    
+    #library h5, a{
+        text-decoration: none;
+        font-family: 'Crimson Text', serif;
+        color: #c12e07;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 2vw 0;
+        font-size: larger;
+    }
+    
+    #library .rating{
+        position: static;
+        font-size: 5vw;
+    }
+    
+    #library .bookmark{
+        position: static;
+        display: inline-block;
+    }
+    
+    #library .col-md-2, .col-sm-6{
+        margin-bottom: 10vw;
+    }
+    
+    /* Author login */
+    
+    .background-container {
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg id='patternId' width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(0)'%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='hsla(31, 69%25, 72%25, 1)'/%3E%3Cpath d='M18.822 18.717s.077-1.396-.737-2.21c-.813-.813-2.21-.736-2.21-.736s-.076 1.396.737 2.21c.814.813 2.21.736 2.21.736zm0-17.643s-1.396-.077-2.21.736c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.736c.813-.814.736-2.21.736-2.21zM3.389 17.98c.813-.813.736-2.21.736-2.21s-1.396-.076-2.21.737c-.813.814-.736 2.21-.736 2.21s1.396.077 2.21-.737zm.736-13.96s.077-1.396-.736-2.21c-.814-.813-2.21-.736-2.21-.736s-.077 1.396.736 2.21c.814.813 2.21.736 2.21.736z' stroke-width='1' stroke='none' fill='hsla(4, 90%25, 58%25, 1)'/%3E%3Cpath d='M15.833 9.896s-.932-1.042-2.083-1.042c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm-7.5 0S7.401 8.854 6.25 8.854c-1.15 0-2.083 1.042-2.083 1.042s.932 1.041 2.083 1.041c1.15 0 2.083-1.041 2.083-1.041zm2.709-3.75c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083C8.958 7.296 10 8.229 10 8.229s1.042-.933 1.042-2.083zm-2.084 7.5c0 1.15 1.042 2.083 1.042 2.083s1.042-.933 1.042-2.083c0-1.15-1.042-2.083-1.042-2.083s-1.042.932-1.042 2.083z' stroke-width='1' stroke='none' fill='hsla(31, 58%25, 58%25, 1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='800%25' height='800%25' transform='translate(0,0)' fill='url(%23a)'/%3E%3C/svg%3E");
+    }
+    
+    
+    .login{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        width: 30%;
+        background-color: #d29656;
+        border: #191825 solid 0.6vw;
+        border-radius: 2vw;
+        margin: auto; 
+        top: 4.2vw;
+    }
+    
+    .login h2{
+        font-family: 'Crimson Text', serif;
+        color: #c12e07;
+        font-weight: bolder;
+    }
+    
+    .login form{
+        font-size: medium;
+        font-weight: bold;
+        position: relative;
+        width: 70%;
+    }
+    
+    /* Update/edit/Delete Page */
+    
+    .modify{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vw;
+        margin-bottom: 10vw; 
+    }
+    
+    .modify form{
+        font-size: medium;
+        font-weight: bold;
+        position: relative;
+        width: 70%;
+        left: 14vw;
+    }
+    
+    /* Review Page */
+    
+    .bookinfo {
+        position: static;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh; 
+        background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(10)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(215,100%,77.6%,1)'/><path d='M23.222 25.097l-3.266-2.056-3.219 2.058.983-3.847-3.042-2.503 3.936-.18 1.52-3.668 1.342 3.578 3.846.312-2.996 2.505z'  stroke-linejoin='round' stroke-linecap='round' stroke-width='2' stroke='hsla(215,66.8%,53.9%,1)' fill='none'/><path d='M.133-5.1l-1.52 3.668-3.935.18 3.043 2.504-.985 3.848L-.043 3.04l3.264 2.057-.895-3.803L5.322-1.21l-3.845-.312L.133-5.1zm40 0l-1.52 3.668-3.935.18 3.043 2.504-.985 3.848 3.221-2.059 3.264 2.057-.895-3.803 2.996-2.504-3.845-.312-1.344-3.579z'  stroke-linejoin='round' stroke-linecap='round' stroke-width='2' stroke='hsla(215,75.3%,85.7%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+        background-size: cover; 
+        background-position: center; 
+    }
+    
+    
+    
+    .bookinfo h1 {
+        position: relative;
+        font-family: 'Crimson text', serif;
+        font-weight: bolder;
+        font-size: 10vw;
+        top: 2.3vw;
+        margin-bottom: 7vw;
+        color: #191825;
+        text-decoration: underline;
+    }
+    
+    .bookinfo .row {
+        margin: 0 7vw;
+        text-align: left;
+    }
+    
+    .bookinfo .row .description {
+        padding-top: 1vw;
+        font-size: large;
+        font-weight: bold;
+        background-color: #bfd6f6;
+        border: 0.5vw solid black;
+        border-radius: 0.8vw;
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
+        white-space: normal;
+    }
+    
+    .description a {
+        text-decoration: underline;
+    }
+    
+    .bookinfo img {
+        position: relative;
+        border: 0.5vw solid black;
+        border-radius: 0.8vw;
+        width: 70%;
+        margin-bottom: 4vw;
+    }
+    
+    .bookinfo .homebtn{
+        margin: 4vw 0;
+    }
+    
+    .commentSection {
+        position: relative;
+        margin: 0 auto 4vw;
+        max-width: 600px; /* Adjust the max-width as needed */
+        background-color: #bfd6f6;
+        text-align: center;
+        border: 0.5vw solid black;
+        border-radius: 0.8vw;
+    }
+    
+    .commentSection .row {
+        margin: 0 auto;
+    }
+    
+    .commentSection .comment {
+        width: 100%;
+    }
+    
+    .commentSection .btn {
+        display: block; 
+        margin: 0 auto; 
+        background-color: #0e9370;
+        color: white;
+        margin-top: 1vw;
+        border: none; 
+        cursor: pointer;
+    }
+    
+    
+    .mb-3 {
+        margin-bottom: 1rem;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 100px; /* Adjust height as needed */
+    }
+    
+    
+    .usercomment .row .abc{
+        background-color: #bfd6f6;
+        font-family: "crimson text", serif;
+        margin-bottom: 0.5vw;
+        padding: 0.5vw 1vw 0;
+    }
+    
+    .abc label{
+        font-weight: bold;
+    }
+    
+    .bookmark{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .aboutus{
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 2vw 7vw;
+    }
+    
+    .aboutus h1{
+        font-family: "crimson text", serif;
+        font-weight: bolder;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
