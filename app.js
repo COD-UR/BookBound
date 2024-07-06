@@ -4,8 +4,8 @@ import pg from "pg";
 
 const app = express();
 const port = 3000;
-const loginId = "bookbound@urvashi.corp711";
-const pass = "76ggydf86";
+const loginId = "adminloginid";
+const pass = "adminpassword";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -17,10 +17,6 @@ const connectionString = "postgresql://bookbound_user:0VPRuJc8p0ZyXDuNyxkNPdBUR1
 
 const db = new Pool({
   connectionString: connectionString,
-  // If you're using a service like Heroku, you might need this for SSL:
-  ssl: {
-    rejectUnauthorized: false,
-  },
 });
 
 db.connect();
