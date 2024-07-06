@@ -12,8 +12,9 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 
+const { Pool } = pg;
 const connectionString = "postgresql://bookbound_user:0VPRuJc8p0ZyXDuNyxkNPdBUR1642FjW@dpg-cq4kulg8fa8c73fr93i0-a.singapore-postgres.render.com/bookbound";//you can create your postgreSQL server on render.com or Vercel and then they'll give u external URL copy that and paste it here
- 
+
 const db = new Pool({
   connectionString: connectionString,
   // If you're using a service like Heroku, you might need this for SSL:
