@@ -4,8 +4,8 @@ import pg from "pg";
 
 const app = express();
 const port = 3000;
-const loginId = "adminlogin";
-const pass = "adminpassword";
+const loginId = "bookbound@urvashi.corp711";
+const pass = "76ggydf86";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -13,12 +13,13 @@ app.set("view engine", "ejs");
 
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "bookbound",
-  password: "Palindrome@711",
-  port: "5432"
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
+
 
 db.connect();
 
