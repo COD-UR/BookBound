@@ -1,24 +1,31 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import dotenv from "dotenv";
 
 const app = express();
 const port = 3000;
-const loginId = "adminloginid";
-const pass = "adminpassword";
+const loginId = "bookbound@urvashi.corp711";
+const pass = "76ggydf86";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 
-const { Pool } = pg;
-const connectionString = "postgresql://bookbound_user:0VPRuJc8p0ZyXDuNyxkNPdBUR1642FjW@dpg-cq4kulg8fa8c73fr93i0-a.singapore-postgres.render.com/bookbound";//you can create your postgreSQL server on render.com or Vercel and then they'll give u external URL copy that and paste it here
+dotenv.config();
 
-const db = new Pool({
-  connectionString: connectionString,
-});
 
+
+/* const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "bookbound",
+  password: "Palindrome@711",
+  port: "5432"
+}); */
+
+const db = new pg.Client({connectionString: process.env.dbConString});
 db.connect();
 
 let book = [];
