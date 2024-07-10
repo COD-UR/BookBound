@@ -25,7 +25,10 @@ dotenv.config();
   port: "5432"
 }); */
 
-const db = new pg.Client({connectionString: process.env.dbConString});
+
+const dbConString = `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
+
+const db = new pg.Client({connectionString: dbConString});
 db.connect();
 
 let book = [];
