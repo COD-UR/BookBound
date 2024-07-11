@@ -26,7 +26,7 @@ dotenv.config();
 }); */
 
 
-const dbConString = `postgresql://bookbound_6183_user:em8ps9vFqCtPa3pht8fzPxGMmZf5yjLq@dpg-cq7hkk6ehbks738vnoj0-a.singapore-postgres.render.com/bookbound_6183`;
+const DBConfigLink = `postgresql://bookbound_6183_user:em8ps9vFqCtPa3pht8fzPxGMmZf5yjLq@dpg-cq7hkk6ehbks738vnoj0-a.singapore-postgres.render.com/bookbound_6183`;
 
 const { Pool } = require('pg');
 const itemsPool = new Pool({
@@ -37,7 +37,6 @@ const itemsPool = new Pool({
 });
 module.exports = itemsPool;
 
-const itemsPool = require('./dbConfig');
 
 
 db.connect();
