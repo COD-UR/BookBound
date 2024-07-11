@@ -2,6 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import dotenv from "dotenv";
+import { Pool } from 'pg';
 
 const app = express();
 const port = 3000;
@@ -28,7 +29,7 @@ dotenv.config();
 
 const DBConfigLink = `postgresql://bookbound_6183_user:em8ps9vFqCtPa3pht8fzPxGMmZf5yjLq@dpg-cq7hkk6ehbks738vnoj0-a.singapore-postgres.render.com/bookbound_6183`;
 
-const { Pool } = require('pg');
+
 const itemsPool = new Pool({
     connectionString: process.env.DBConfigLink,
     ssl: {
