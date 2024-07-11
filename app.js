@@ -32,14 +32,14 @@ dotenv.config();
 const DBConfigLink = `postgresql://bookbound_6183_user:em8ps9vFqCtPa3pht8fzPxGMmZf5yjLq@dpg-cq7hkk6ehbks738vnoj0-a.singapore-postgres.render.com/bookbound_6183`;
 
 
-const itemsPool = new Pool({
+const db = new Pool({
     connectionString: process.env.DBConfigLink,
     ssl: {
         rejectUnauthorized: false
     }
 });
 
-export default itemsPool;
+export default db;
 
 
 
