@@ -26,9 +26,20 @@ dotenv.config();
 }); */
 
 
-const dbConString = `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
+const dbConString = `postgresql://bookbound_6183_user:em8ps9vFqCtPa3pht8fzPxGMmZf5yjLq@dpg-cq7hkk6ehbks738vnoj0-a.singapore-postgres.render.com/bookbound_6183`;
 
-const db = new pg.Client({connectionString: dbConString});
+const { Pool } = require('pg');
+const itemsPool = new Pool({
+    connectionString: process.env.DBConfigLink,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
+module.exports = itemsPool;
+
+const itemsPool = require('./dbConfig');
+
+
 db.connect();
 
 let book = [];
