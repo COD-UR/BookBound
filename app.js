@@ -38,7 +38,8 @@ const itemsPool = new Pool({
         rejectUnauthorized: false
     }
 });
-module.exports = itemsPool;
+
+export default itemsPool;
 
 
 
