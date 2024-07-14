@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import pg from "pg";
 import dotenv from "dotenv";
 import pkg from 'pg';
-const { Pool } = pkg;
+const { Pool } = pg;
 
 
 const app = express();
